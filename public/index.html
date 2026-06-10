@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>databoxing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <input id="url" type="text" placeholder="paste a url" spellcheck="false" autocomplete="off">
+    <button id="go">extract</button>
+  </main>
+
+  <div id="overlay" hidden>
+    <div id="modal">
+      <button id="close">✕</button>
+      <p id="modal-title">format</p>
+      <div id="options">
+        <button class="option" data-format="ai">
+          ai
+          <small>suggested</small>
+        </button>
+        <button class="option" data-format="excel">excel</button>
+        <button class="option" data-format="csv">csv</button>
+        <button class="option" data-format="json">json</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="controls" hidden>
+    <button id="reopen">format</button>
+    <button id="download" hidden>download</button>
+  </div>
+
+  <pre id="output"></pre>
+  <script src="main.js"></script>
+</body>
+</html>
